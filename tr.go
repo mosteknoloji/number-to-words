@@ -46,12 +46,13 @@ func IntegerToTurkish(input int) string {
 		units := triplet % 10
 		//log.Printf("Input: %d, Idx: %d, Hundreds:%d, Tens:%d, Units:%d\n", input, idx, hundreds, tens, units)
 
-		if hundreds > 0 {
-			if hundreds == 1 {
-				words = append(words, "yüz")
-			} else {
-				words = append(words, turkishUnits[hundreds], "yüz")
-			}
+		switch hundreds {
+		case 0:
+			break
+		case 1:
+			words = append(words, "yüz")
+		default:
+			words = append(words, turkishUnits[hundreds], "yüz")
 		}
 
 		if tens == 0 && units == 0 {
