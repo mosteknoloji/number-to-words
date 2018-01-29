@@ -61,6 +61,7 @@ func TestIntegerToTurkish(t *testing.T) {
 			35174315119:   "otuz beş milyar yüz yetmiş dört milyon üç yüz on beş bin yüz on dokuz",
 			935174315119:  "dokuz yüz otuz beş milyar yüz yetmiş dört milyon üç yüz on beş bin yüz on dokuz",
 			2935174315119: "iki trilyon dokuz yüz otuz beş milyar yüz yetmiş dört milyon üç yüz on beş bin yüz on dokuz",
+			101101101:     "yüz bir milyon yüz bir bin yüz bir",
 		}
 		for input, expectedOutput := range testing {
 			So(IntegerToTurkish(input), ShouldEqual, expectedOutput)

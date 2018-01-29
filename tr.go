@@ -61,7 +61,7 @@ func IntegerToTurkish(input int) string {
 
 		switch tens {
 		case 0:
-			if !(units == 1 && idx == 1) {
+			if hundreds == 1 || !(units == 1 && idx == 1) {
 				words = append(words, turkishUnits[units])
 			}
 		case 1:
